@@ -1,0 +1,5 @@
+# На базе образа php:7.4-fpm
+FROM php:7.4-fpm
+
+# Копируем содержимое директории mounts/site в /var/www/html
+COPY mounts/site /var/www/html

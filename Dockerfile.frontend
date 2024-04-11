@@ -1,0 +1,11 @@
+# На базе образа nginx:1.23-alpine
+FROM nginx:1.23-alpine
+
+# Копирование файлов веб-сайта
+COPY mounts/site /var/www/html
+
+# Копирование файла конфигурации nginx
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+
+# Открытие порта 80
+EXPOSE 80
